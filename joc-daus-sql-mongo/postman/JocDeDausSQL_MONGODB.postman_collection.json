@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "39592a40-a8bb-4bb4-8696-30c89532daac",
+		"name": "JocDeDausSQL_MONGODB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JugadorController",
+			"item": [
+				{
+					"name": "getAllPlayers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createJugadorAnonim",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha_registro\":\"2022-04-01\",\r\n    \"id\":2,\r\n    \"tiradas\": [\r\n        {\r\n            \"id\": 3,\r\n            \"valorTirada1\": 4,\r\n            \"valorTirada2\": 3,\r\n            \"ganado\": true\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"valorTirada1\": 1,\r\n            \"valorTirada2\": 6,\r\n            \"ganado\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/players",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createJugador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"jorge\",\r\n    \"fecha_registro\": \"2021-05-13\",\r\n    \"id\":1,\r\n    \"tiradas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"valorTirada1\": 5,\r\n            \"valorTirada2\": 1,\r\n            \"ganado\": false\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"valorTirada1\": 1,\r\n            \"valorTirada2\": 6,\r\n            \"ganado\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/players",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateJugador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "jorge",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/players/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getJugadoresRanking()",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/ranking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"ranking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaPorcentajeMedioExitosJugadores()",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/percentage",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"percentage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getJugadorPerdedor()",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/ranking/loser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"ranking",
+								"loser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getJugadorGanador()",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/ranking/winner",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"ranking",
+								"winner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TiradasController",
+			"item": [
+				{
+					"name": "addTirada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "5",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/players/2/tiradas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"2",
+								"tiradas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTiradasByJugador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/2/tiradas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"2",
+								"tiradas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTiradasJugador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/players/1/tiradas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"players",
+								"1",
+								"tiradas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/info",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
