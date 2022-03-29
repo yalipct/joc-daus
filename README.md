@@ -71,7 +71,7 @@ GET /players/ranking/winner
 
 ___
 Fase 1
-* **Persistència**: utilitza com a base de  dades *mysql*
+* **Persistència**: utilitza com a base de  dades *MySQL*
 
 Fase 2
 * **Canvia la configuració** i  utilitza *MongoDB* per persistir les dades
